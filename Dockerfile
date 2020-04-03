@@ -11,6 +11,7 @@ FROM openjdk:8-jdk-slim
 
 COPY --from=build /app /app
 WORKDIR /app/server
+RUN sed $'s/\r$//' ./gradlew > ./gradlew
 RUN ./gradlew bootJar
 
 WORKDIR /app/server/build/libs
