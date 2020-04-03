@@ -1,0 +1,13 @@
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+.gradle
+.settings
+.project
+.classpath
+yarn.lock
+server/build
+server/bin
+server/src/main/resources/public
+client/dist
+client/node_modules

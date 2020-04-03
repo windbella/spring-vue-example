@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Debug Client",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}\\client\\src",
+            "breakOnLoad": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./src/*": "${webRoot}\\*"
+            }
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.server.Application",
+            "projectName": "server",
+            "args": ""
+        }
+    ]
+}
