@@ -5,7 +5,8 @@
 - ESLint
 - Vetur
 - Spring Boot Tools
-- Spring Initializr Java Support  
+- Spring Initializr Java Support
+- Gradle Tasks
 
 ## Easy Start
 - cd ./client
