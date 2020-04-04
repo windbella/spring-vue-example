@@ -9,9 +9,11 @@ RUN yarn build
 
 FROM openjdk:8-jdk-slim
 
-COPY --from=build /app /app
+COPY --from=build /app/server /app/server
 WORKDIR /app/server
-RUN sed $'s/\r$//' ./gradlew > ./gradlew
+RUN mv ./gradlew ./gradlew.tmp
+RUN sed 's/\r$//' ./gradlew.tmp > ./gradlew
+RUN chmod 755 ./gradlew
 RUN ./gradlew bootJar
 
 WORKDIR /app/server/build/libs
